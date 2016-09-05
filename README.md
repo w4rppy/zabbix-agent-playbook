@@ -1,9 +1,9 @@
 # ZABBIX-AGENT
 
-## DEPLOY
+## Deploy
 `$> ansible-playbook -i hosts -l [host] deploy.yml`
 
-## REMOVE
+## Remove
 
 `$> ansible-playbook -i hosts -l [host] remove.yml`
 
