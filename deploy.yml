@@ -3,6 +3,7 @@
   user: ec2-user
   gather_facts: yes
   vars:
+    - zabbix_server_ip: 127.0.0.1
     - zabbix_agent_register_server: true
     - zabbix_agent_state: present   #present|absent
     - zabbix_agent_status: enabled  #enabled|disabled
