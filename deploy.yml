@@ -5,8 +5,8 @@
   vars:
     - zabbix_server_ip: 127.0.0.1
     - zabbix_agent_register_server: true
-    - zabbix_agent_state: present   #present|absent
-    - zabbix_agent_status: enabled  #enabled|disabled
+    - zabbix_agent_state: present
+    - zabbix_agent_status: enabled
   roles:
     - { role: zabbix-agent-deploy }
     - { role: zabbix-agent-registration }

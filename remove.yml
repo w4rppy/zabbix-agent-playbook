@@ -4,8 +4,8 @@
   gather_facts: yes
   vars:
     - zabbix_agent_register_server: true
-    - zabbix_agent_state: absent    #present|absent
-    - zabbix_agent_status: disabled #enabled|disabled
+    - zabbix_agent_state: absent
+    - zabbix_agent_status: disabled
   roles:
     - { role: zabbix-agent-remove }
     - { role: zabbix-agent-registration }

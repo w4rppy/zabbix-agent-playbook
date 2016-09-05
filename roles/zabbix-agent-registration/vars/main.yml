@@ -13,5 +13,3 @@ zabbix_agent_hostgroup:
 #  - AutoScaleHosts
 zabbix_agent_interface_ip: {{ ansible_default_ipv4.address }}
 zabbix_server: {{ zabbix_server_ip }}
-zabbix_agent_state:   present   #present|absent
-zabbix_agent_status:  enabled   #enabled|disabled
