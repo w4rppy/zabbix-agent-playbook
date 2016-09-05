@@ -1,0 +1,17 @@
+---
+zabbix_agent_url: http://zabbix.traderfrance.com/zabbix/
+zabbix_agent_user: ansible
+zabbix_agent_password: ansible
+zabbix_agent_template:
+  - Template OS Linux
+zabbix_agent_hostgroup:
+  - Linux servers
+#  - Discovered hosts
+#  - Joubert-Hosts
+#  - DBs MySQL
+#  - AWS-Other
+#  - AutoScaleHosts
+zabbix_agent_interface_ip: [host_ip]
+zabbix_server: [zbx_server_ip]
+zabbix_agent_state:   present   #present|absent
+zabbix_agent_status:  enabled   #enabled|disabled

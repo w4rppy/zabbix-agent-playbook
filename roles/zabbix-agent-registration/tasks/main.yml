@@ -1,0 +1,21 @@
+---
+- name: Register on Zabbix server
+  become_user: root
+  when: zabbix_agent_register_server is defined and zabbix_agent_register_server
+  local_action:
+    module: zabbix_host
+    server_url: "{{zabbix_agent_url}}"
+    login_user: "{{zabbix_agent_user}}"
+    login_password: "{{zabbix_agent_password}}"
+    host_name: "{{ansible_hostname}}"
+    host_groups: "{{zabbix_agent_hostgroup}}"
+    link_templates: "{{zabbix_agent_template}}"
+    status: "{{zabbix_agent_status}}"
+    state: "{{zabbix_agent_state}}"
+    interfaces:
+      - type: 1
+        main: 1
+        useip: 1
+        ip: "{{zabbix_agent_interface_ip}}"
+        dns: ""
+        port: 10050

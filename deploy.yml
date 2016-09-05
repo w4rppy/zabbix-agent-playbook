@@ -1,0 +1,11 @@
+---
+- hosts: all
+  user: ec2-user
+  gather_facts: yes
+  vars:
+    - zabbix_agent_register_server: true
+    - zabbix_agent_state: present   #present|absent
+    - zabbix_agent_status: enabled  #enabled|disabled
+  roles:
+    - { role: zabbix-agent-deploy }
+    - { role: zabbix-agent-registration }

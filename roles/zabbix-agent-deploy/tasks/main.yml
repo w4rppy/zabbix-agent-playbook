@@ -1,0 +1,21 @@
+---
+- name: Push zabbix repo
+  copy: src=zabbix.repo.j2 dest=/etc/yum.repos.d/zabbix.repo
+    owner=root
+    group=root
+    mode=0644
+
+- name: Install zabbix-agent
+  become: true
+  yum: name=zabbix-agent disable_gpg_check=yes state=present
+
+- name: Push zabbix-agent conf
+  become: true
+  copy: src=zabbix_agentd.conf.j2 dest=/etc/zabbix/zabbix_agentd.conf
+    owner=root
+    group=root
+    mode=0644
+
+- name: Enable zabbix-agent service
+  become: true
+  service: name=zabbix-agent enabled=yes state=restarted

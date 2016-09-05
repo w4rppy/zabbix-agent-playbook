@@ -1,0 +1,7 @@
+localhost ansible_connection=local
+
+[zbx]
+localhost ansible_port=666 ansible_ssh_user=user ansible_ssh_password=password
+
+[all:vars]
+ansible_ssh_private_key_file=~/.ssh/id_rsa

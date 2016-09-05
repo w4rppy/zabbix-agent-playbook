@@ -1,0 +1,17 @@
+---
+- name: Remove old zabbix repo
+  become: true
+  yum: disablerepo=zabbix state=absent name=zabbix
+
+- name: Remove /etc/zabbix/zabbix_agentd.d/
+  file: path=/etc/zabbix/zabbix_agentd.d/ state=absent
+
+- name: Remove old zabbix agents
+  yum: disablerepo=zabbix state=absent name={{ item }}
+  with_items:
+    - zabbix
+    - zabbix20
+    - zabbix22
+    - zabbix-agent
+    - zabbix20-agent
+    - zabbix22-agent
