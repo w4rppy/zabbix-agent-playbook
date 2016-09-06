@@ -1,18 +1,18 @@
-# ZABBIX-AGENT
+## ZABBIX-AGENT
 
-## Deploy
+### Deploy
 `$> ansible-playbook -i hosts -l [host] deploy.yml`
 
-## Remove
+### Remove
 
 `$> ansible-playbook -i hosts -l [host] remove.yml`
 
-## Credits
+### Credits
 
 * **Dorian COLNOT**
 * [All contributors](https://github.com/w4rppy/zabbix-agent-playbook/cactilize/graphs/contributors)
 
-## References
+### References
 
 - [Ansible](http://www.ansibleworks.com)
 - [Ansible Playbook](http://docs.ansible.com/playbooks.html)
