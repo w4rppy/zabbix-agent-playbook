@@ -9,7 +9,7 @@
 
 ### Credits
 
-* **Dorian COLNOT**
+* **Dorian 'warp' COLNOT**
 * [All contributors](https://github.com/w4rppy/zabbix-agent-playbook/cactilize/graphs/contributors)
 
 ### References
